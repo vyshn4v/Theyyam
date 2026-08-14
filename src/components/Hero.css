@@ -1,0 +1,237 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0B0908;
+  color: #F4EBDD;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08); /* Initial state for GSAP */
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(11,9,8,0.2) 0%, transparent 40%, rgba(11,9,8,0.7) 100%);
+}
+
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #F4EBDD;
+  text-transform: uppercase;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #B6A58D;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hero-nav a:hover {
+  color: #F4EBDD;
+}
+
+.hero-nav-btn {
+  padding: 8px 24px;
+  border: 1px solid rgba(244, 235, 221, 0.3);
+  border-radius: 50px;
+  color: #F4EBDD !important;
+  transition: border-color 0.3s ease;
+}
+
+.hero-nav-btn:hover {
+  border-color: #B18A45;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.hero-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 32px; /* space for center CTA */
+}
+
+.hero-headline {
+  margin: 0;
+  padding: 0;
+}
+
+.headline-mask {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.headline-word {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 10vw, 140px);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #F4EBDD;
+  line-height: 1;
+}
+
+.hero-subline {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #B6A58D;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.hero-bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+  padding-bottom: 32px; /* space for center CTA */
+}
+
+.hero-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #B6A58D;
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border: 1px solid rgba(244, 235, 221, 0.3);
+  border-radius: 50px;
+  color: #F4EBDD;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  transition: border-color 250ms ease, color 250ms ease;
+}
+
+.hero-cta-arrow {
+  display: inline-block;
+  transition: transform 250ms ease;
+}
+
+.hero-cta:hover {
+  border-color: #B18A45;
+  color: #F4EBDD;
+}
+
+.hero-cta:hover .hero-cta-arrow {
+  transform: translateY(6px);
+}
+
+.hero-credit {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: rgba(182, 165, 141, 0.5);
+  letter-spacing: 0.1em;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 24px;
+  }
+  
+  .hero-nav {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding-bottom: 100px; /* space for CTA */
+  }
+
+  .hero-bottom-left {
+    padding-bottom: 0;
+  }
+
+  .hero-bottom-right {
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .hero-cta {
+    bottom: 32px;
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+
+  .hero-credit {
+    right: 8px;
+  }
+}

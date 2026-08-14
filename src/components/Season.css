@@ -1,0 +1,193 @@
+.season {
+  background-color: #0B0908;
+  color: #F4EBDD;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.season .container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.season .season__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #B6A58D;
+  margin-bottom: 40px;
+}
+
+.season .season__headline-container {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.season .season-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 2vw, 18px);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #B6A58D;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.season .season-range {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 40px);
+}
+
+.season .season__reveal {
+  display: inline-block;
+}
+
+.season .season__month-large {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 300;
+  color: #F4EBDD;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.season .season__hyphen {
+  display: inline-block;
+  transform: translateY(-0.05em);
+  padding: 0 0.05em;
+}
+
+.season .season__arrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 300;
+  color: #B18A45;
+  line-height: 1;
+}
+
+.season .season__vline {
+  width: 1px;
+  height: 80px;
+  background-color: #B18A45;
+  margin: 0 auto 40px;
+}
+
+.season .season__support {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.season .season__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #B6A58D;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.season .season__notes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.season .season__notes p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(182, 165, 141, 0.7);
+  margin: 0;
+}
+
+.season .season__timeline {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.season .season__hline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(182, 165, 141, 0.3);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.season .season__dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #A9271B;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 0 0 12px rgba(169, 39, 27, 0.4);
+}
+
+.season .season__months {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.season .season__month {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #B6A58D;
+  background-color: #0B0908;
+  padding: 0 12px;
+}
+
+@media (max-width: 768px) {
+  .season {
+    padding: 80px 0;
+  }
+
+  .season .season-range {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .season .season__arrow {
+    transform: rotate(90deg);
+  }
+  
+  .season .season__timeline {
+    max-width: 100%;
+  }
+
+  .season .season__month {
+    padding: 0 6px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+}

@@ -1,0 +1,46 @@
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #0B0908;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro-loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-eyebrow {
+  font-family: 'Inter', sans-serif;
+  color: #B6A58D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+.intro-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #F4EBDD;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin: 0 0 24px 0;
+  line-height: 1;
+}
+
+.intro-line {
+  width: 200px;
+  max-width: 80vw;
+  height: 1px;
+  background-color: #B18A45;
+  margin: 0 auto;
+}

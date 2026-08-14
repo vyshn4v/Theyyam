@@ -1,0 +1,240 @@
+.ritual-section {
+    background-color: #0B0908;
+    color: #F4EBDD;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0 0 0;
+}
+
+.ritual-header-wrapper {
+    padding: 0 5%;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.ritual-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ritual-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #B6A58D;
+    margin-bottom: 12px;
+}
+
+.ritual-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 300;
+    color: #F4EBDD;
+    margin: 0 0 16px 0;
+    line-height: 1;
+}
+
+.ritual-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #B6A58D;
+    margin: 0;
+}
+
+.ritual-track-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ritual-track {
+    display: flex;
+    width: fit-content;
+    padding: 0 5vw 100px 5vw;
+    gap: 5vw;
+}
+
+.ritual-card {
+    width: 70vw;
+    max-width: 900px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ritual-card-inner {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(182, 165, 141, 0.1);
+    position: relative;
+}
+
+.ritual-image-wrapper {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ritual-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ritual-photographer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: rgba(244, 235, 221, 0.6);
+    background: rgba(11, 9, 8, 0.7);
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.ritual-text-wrapper {
+    width: 45%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.ritual-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: #F4EBDD;
+    opacity: 0.08;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ritual-text-content {
+    position: relative;
+    z-index: 2;
+}
+
+.ritual-stage-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #F4EBDD;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+}
+
+.ritual-stage-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #B6A58D;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.ritual-progress-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
+    height: 1px;
+    display: none; /* Show only on desktop where pinned */
+}
+
+.ritual-progress-track {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(182, 165, 141, 0.2);
+    position: relative;
+}
+
+.ritual-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #B18A45;
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+    .ritual-section {
+        padding: 60px 0;
+    }
+    
+    .ritual-header-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .ritual-track {
+        flex-direction: column;
+        padding: 0 5%;
+        gap: 60px;
+        width: 100%;
+    }
+
+    .ritual-card {
+        width: 100%;
+    }
+
+    .ritual-card-inner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .ritual-image-wrapper {
+        width: 100%;
+        height: 300px;
+    }
+
+    .ritual-text-wrapper {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .ritual-number {
+        top: 10px;
+        right: 15px;
+        font-size: 80px;
+    }
+}
+
+/* Desktop layout additions */
+@media (min-width: 768px) {
+    .ritual-progress-wrapper {
+        display: block;
+        bottom: 50px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .ritual-track {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 5%;
+        gap: 60px;
+    }
+    .ritual-card {
+        width: 100%;
+    }
+    .ritual-progress-wrapper {
+        display: none;
+    }
+}
