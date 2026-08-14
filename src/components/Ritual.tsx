@@ -63,7 +63,7 @@ const Ritual: React.FC = () => {
                 return trackWidth - window.innerWidth;
             };
             
-            const tween = gsap.to(track, {
+            gsap.to(track, {
                 x: () => -getScrollAmount(),
                 ease: 'none',
                 scrollTrigger: {
